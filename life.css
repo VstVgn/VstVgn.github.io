@@ -414,6 +414,7 @@ body::after {
 
   .life-section {
     padding: 24px 20px;
+    overflow: hidden;
   }
 
   .life-heading {
@@ -422,12 +423,22 @@ body::after {
 
   .life-list {
     grid-template-columns: 1fr;
+    min-width: 0;
   }
 
   .life-card {
     min-height: auto;
+    min-width: 0;
+    max-width: 100%;
     padding: 16px;
     border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .championship-box,
+  .horizontal-photo-strip {
+    max-width: 100%;
+    min-width: 0;
   }
 
   .championship-list {
@@ -439,7 +450,19 @@ body::after {
     gap: 2px;
   }
 
+  .championship-text,
+  .championship-text a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .horizontal-photo-strip {
+    width: 100%;
+    overflow-x: auto;
+  }
+
   .horizontal-photo-strip figure {
-    flex-basis: 260px;
+    flex: 0 0 min(260px, 82vw);
+    max-width: 260px;
   }
 }
