@@ -407,13 +407,23 @@ body::after {
 
 /* Mobile */
 
+/* Mobile */
+
 @media (max-width: 760px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .life-page-header h1 {
     font-size: 2.5rem;
   }
 
   .life-section {
-    padding: 24px 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
     overflow: hidden;
   }
 
@@ -422,21 +432,25 @@ body::after {
   }
 
   .life-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
     min-width: 0;
   }
 
   .life-card {
-    min-height: auto;
-    min-width: 0;
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
+    min-height: auto;
     padding: 16px;
     border-radius: 18px;
     overflow: hidden;
   }
 
   .championship-box,
-  .horizontal-photo-strip {
+  .music-player-box {
+    width: 100%;
     max-width: 100%;
     min-width: 0;
   }
@@ -458,11 +472,40 @@ body::after {
 
   .horizontal-photo-strip {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+
+    gap: 12px;
     overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+
+    padding-bottom: 8px;
+    box-sizing: border-box;
   }
 
   .horizontal-photo-strip figure {
-    flex: 0 0 100%;
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+  }
+
+  .horizontal-photo-strip img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .horizontal-photo-strip figcaption {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 }
