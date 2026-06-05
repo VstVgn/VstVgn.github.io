@@ -1,0 +1,445 @@
+/* ===== Life page only ===== */
+
+/* Background */
+
+body {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 122, 122, 0.30), transparent 30%),
+    radial-gradient(circle at 85% 12%, rgba(255, 186, 120, 0.28), transparent 28%),
+    radial-gradient(circle at 75% 82%, rgba(255, 107, 154, 0.20), transparent 30%),
+    linear-gradient(135deg, #fff1f2 0%, #ffe4e6 45%, #fff7ed 100%);
+}
+
+body::before {
+  background: #fb7185;
+}
+
+body::after {
+  background: #f97316;
+}
+
+/* Page title */
+
+.life-page-header {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 14px 4px 4px;
+  margin-bottom: 22px;
+  overflow: visible;
+}
+
+.life-page-header::before,
+.life-page-header::after {
+  display: none;
+}
+
+.life-page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #2b1618;
+}
+
+/* Main life layout */
+
+.life-section {
+  margin-top: 26px;
+  padding: 34px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 14px 38px rgba(127, 29, 29, 0.09);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
+}
+
+.life-heading {
+  margin: 0 0 14px;
+  font-size: 1.65rem;
+  line-height: 1.2;
+  color: #2b1618;
+  letter-spacing: -0.03em;
+  padding-left: 18px;
+  position: relative;
+}
+
+.life-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  width: 7px;
+  height: 1.1em;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ef4444, #f97316);
+}
+
+/* Cards */
+
+.life-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  border-radius: 0;
+}
+
+.life-card {
+  position: relative;
+  min-height: 210px;
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: 0 8px 24px rgba(127, 29, 29, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.life-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(127, 29, 29, 0.10);
+}
+
+.life-card:first-child:last-child {
+  grid-column: 1 / -1;
+}
+
+.life-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #b91c1c;
+  background: rgba(239, 68, 68, 0.10);
+}
+
+.life-title {
+  margin-bottom: 7px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  font-weight: 850;
+  color: #2b1618;
+}
+
+.life-text {
+  margin: 0;
+  color: #5f3c40;
+  font-size: 0.94rem;
+  line-height: 1.62;
+}
+
+.life-meta {
+  margin-top: 8px;
+  color: #9f5f66;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+/* Championship / highlights block */
+
+.championship-box {
+  margin-top: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: 0 8px 24px rgba(127, 29, 29, 0.06);
+  overflow: hidden;
+}
+
+.championship-header {
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 850;
+  color: #2b1618;
+  background: rgba(239, 68, 68, 0.09);
+  border-bottom: 1px solid rgba(239, 68, 68, 0.12);
+}
+
+.championship-list {
+  list-style: none;
+  margin: 0;
+  padding: 2px 12px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.championship-list li {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.championship-list li:last-child {
+  border-bottom: none;
+}
+
+.championship-date {
+  color: #111827;
+  font-size: 0.74rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.championship-text {
+  color: #5f3c40;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.championship-list::-webkit-scrollbar,
+.music-list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.championship-list::-webkit-scrollbar-track,
+.music-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+}
+
+.championship-list::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.38);
+  border-radius: 999px;
+}
+
+.championship-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 38, 38, 0.52);
+}
+
+/* Horizontal photo strip */
+
+.horizontal-photo-strip {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+}
+
+.horizontal-photo-strip figure {
+  flex: 0 0 320px;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: 0 8px 24px rgba(127, 29, 29, 0.06);
+  scroll-snap-align: start;
+}
+
+.horizontal-photo-strip img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.horizontal-photo-strip figcaption {
+  padding: 10px 12px;
+  color: #7a4b50;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.horizontal-photo-strip::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-photo-strip::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+}
+
+.horizontal-photo-strip::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.38);
+  border-radius: 999px;
+}
+
+.horizontal-photo-strip::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 38, 38, 0.52);
+}
+
+/* Music player */
+
+.music-player-box {
+  margin-top: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: 0 8px 24px rgba(127, 29, 29, 0.06);
+  overflow: hidden;
+}
+
+.music-list-header {
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 850;
+  color: #2b1618;
+  background: rgba(236, 72, 153, 0.09);
+  border-bottom: 1px solid rgba(236, 72, 153, 0.12);
+}
+
+.music-list {
+  list-style: none;
+  margin: 0;
+  padding: 2px 12px;
+  max-height: 145px;
+  overflow-y: auto;
+}
+
+.music-list li {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.music-list li:last-child {
+  border-bottom: none;
+}
+
+.music-item {
+  width: 100%;
+  display: block;
+  padding: 7px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #5f3c40;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.music-item:hover,
+.music-item.active {
+  color: #be185d;
+  font-weight: 900;
+}
+
+.music-list::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.38);
+  border-radius: 999px;
+}
+
+.music-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(190, 24, 93, 0.52);
+}
+
+.shared-audio-player {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.52);
+  border-top: 1px solid rgba(236, 72, 153, 0.12);
+}
+
+.now-playing {
+  margin-bottom: 8px;
+  color: #9f5f66;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+#current-track-title {
+  color: #2b1618;
+}
+
+.shared-audio-player audio {
+  width: 100%;
+  display: block;
+}
+
+/* Section accents */
+
+#sport .life-heading::before {
+  background: linear-gradient(180deg, #ef4444, #f97316);
+}
+
+#sport .life-tag {
+  color: #b91c1c;
+  background: rgba(239, 68, 68, 0.10);
+}
+
+#music .life-heading::before {
+  background: linear-gradient(180deg, #ec4899, #f97316);
+}
+
+#music .life-tag {
+  color: #be185d;
+  background: rgba(236, 72, 153, 0.10);
+}
+
+#music .life-card:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+#dance .life-heading::before {
+  background: linear-gradient(180deg, #f97316, #eab308);
+}
+
+#dance .life-tag {
+  color: #c2410c;
+  background: rgba(249, 115, 22, 0.12);
+}
+
+/* Links */
+
+.life-card a {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.life-card a:hover {
+  color: #7f1d1d;
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .life-page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .life-section {
+    padding: 24px 20px;
+  }
+
+  .life-heading {
+    font-size: 1.35rem;
+  }
+
+  .life-list {
+    grid-template-columns: 1fr;
+  }
+
+  .life-card {
+    min-height: auto;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .championship-list {
+    max-height: 180px;
+  }
+
+  .championship-list li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .horizontal-photo-strip figure {
+    flex-basis: 260px;
+  }
+}
