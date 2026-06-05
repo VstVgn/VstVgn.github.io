@@ -462,7 +462,7 @@ body::after {
   }
 
   .horizontal-photo-strip figure {
-    flex: 0 0 min(260px, 82vw);
-    max-width: 260px;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
