@@ -10,20 +10,6 @@ body {
     linear-gradient(135deg, #fff1f2 0%, #ffe4e6 45%, #fff7ed 100%);
 }
 
-/* Refined, lively life palette */
-body { background: radial-gradient(circle at 12% 10%, rgba(242, 176, 124, .20), transparent 28%), radial-gradient(circle at 90% 75%, rgba(120, 180, 171, .18), transparent 30%), #faf7f1; }
-.life-page-header h1, .life-heading { font-family: Georgia, "Noto Serif SC", serif; font-weight: 500; }
-.life-section { padding: 28px; margin-top: 18px; border-color: rgba(92, 70, 52, .10); border-radius: var(--radius-xl); box-shadow: 0 12px 34px rgba(88, 61, 41, .06); }
-.life-heading { padding-left: 0; }
-.life-heading::before { display: none; }
-.life-list { gap: 12px; }
-.life-card { min-height: 0; padding: 18px; border-radius: 14px; box-shadow: none; border: 1px solid rgba(92,70,52,.09); }
-.life-card:hover { transform: translateY(-2px) rotate(.08deg); box-shadow: 0 12px 28px rgba(88,61,41,.08); }
-.life-tag { border-radius: 5px; letter-spacing: .07em; text-transform: uppercase; }
-.horizontal-photo-strip figure { flex-basis: 280px; border-radius: 12px; }
-.championship-box, .music-player-box { border-radius: 12px; box-shadow: none; }
-@media (max-width:760px) { .life-section { padding: 21px 15px; } }
-
 body::before {
   background: #fb7185;
 }

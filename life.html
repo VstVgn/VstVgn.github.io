@@ -8,10 +8,11 @@
 
   <meta name="description" content="Life page of Ziyao Su, including table tennis, music compositions, and dance." />
   <meta name="author" content="Ziyao Su" />
+  <script>try{document.documentElement.lang=new URLSearchParams(location.search).get('lang')==='zh'||localStorage.getItem('site-language')==='zh'?'zh-CN':'en'}catch(e){}</script>
   
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="life.css" />
-  <link rel="stylesheet" href="refine.css?v=20260813-3" />
+  <link rel="stylesheet" href="refine.css?v=20260813-13" />
 </head>
 
 <body>
@@ -341,7 +342,7 @@
 
         <div class="shared-audio-player">
           <div class="now-playing">
-            Now playing:
+            <span data-en="Now playing:" data-zh="正在播放：">Now playing:</span>
             <span id="current-track-title">Dorian Lydian Birthday</span>
           </div>
 
@@ -402,7 +403,7 @@
     });
   });
 </script>
-<script src="site.js?v=20260813-3"></script>
+<script src="site.js?v=20260813-13"></script>
 
 </body>
 </html>
