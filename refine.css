@@ -1,7 +1,7 @@
 /* Final shared visual layer - loaded after page-specific styles. */
 :root { --ink:#182129; --muted:#5e6a73; --soft:#83909a; --primary:#345d73; --primary-dark:#234759; --paper:#f7f7f4; --card:rgba(255,255,252,.88); --border:rgba(31,47,55,.11); --radius-xl:18px; --shadow-md:0 12px 36px rgba(32,46,52,.055); }
-html { scroll-behavior:smooth; background:var(--paper); }
-body { color:var(--ink); background:linear-gradient(145deg,#edf2f0 0%,#f4f0e9 45%,#e9eff2 100%); background-attachment:fixed; font-family:Inter,"Noto Sans SC","PingFang SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; opacity:0; transform:translateY(5px); transition:opacity .35s ease,transform .35s ease; }
+html { scroll-behavior:smooth; background-color:#dfe8e5 !important; background-image:linear-gradient(135deg,#dce8e4 0%,#eee4d7 48%,#d8e4ea 100%) !important; min-height:100%; }
+body { color:var(--ink); background-color:#e6ece8 !important; background-image:linear-gradient(135deg,#dce8e4 0%,#eee4d7 48%,#d8e4ea 100%) !important; background-attachment:fixed !important; min-height:100vh; font-family:Inter,"Noto Sans SC","PingFang SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; opacity:0; transform:translateY(5px); transition:opacity .35s ease,transform .35s ease; }
 body.page-ready { opacity:1; transform:none; }
 body.page-leaving { opacity:0; transform:translateY(-3px); }
 body::before,body::after,header::before,header::after { display:none !important; content:none !important; animation:none !important; }
@@ -20,7 +20,7 @@ body::before,body::after,header::before,header::after { display:none !important;
 .language-toggle span { transition:color .2s ease,font-weight .2s ease; }
 .language-toggle span.active { color:var(--primary-dark); font-weight:800; }
 .container,.page-container { max-width:1040px; }
-header,section { border:1px solid rgba(42,63,71,.10); border-radius:var(--radius-xl); box-shadow:0 16px 46px rgba(41,55,60,.065); background:linear-gradient(145deg,rgba(252,252,248,.91),rgba(238,244,242,.82)); }
+header,section { border:1px solid rgba(42,63,71,.13); border-radius:var(--radius-xl); box-shadow:0 16px 46px rgba(41,55,60,.075); background-color:rgba(235,242,238,.94); background-image:linear-gradient(145deg,rgba(247,244,235,.94),rgba(221,235,232,.91)); }
 .home-hero { padding:42px; grid-template-columns:214px 1fr; gap:42px; }
 .profile-photo { width:190px; height:190px; border-radius:13px; box-shadow:0 10px 30px rgba(31,43,49,.12); }
 h1 { font-family:Georgia,"Noto Serif SC",serif; font-weight:500; font-size:clamp(2.25rem,4vw,3.3rem); }
@@ -65,7 +65,7 @@ section h2::before { display:none; }
 .pub-abstract { border-left-color:var(--primary); border-radius:4px 9px 9px 4px; }
 
 /* Life - warmer and more playful, while retaining the shared shell. */
-body:has(.life-page-header) { background:linear-gradient(140deg,#f5e9df 0%,#edf1e7 48%,#e5edf0 100%); background-attachment:fixed; }
+body:has(.life-page-header) { background-color:#e9e1d9 !important; background-image:linear-gradient(140deg,#ead7c7 0%,#dfe9dc 48%,#d5e3e8 100%) !important; background-attachment:fixed !important; }
 .life-page-header h1,.life-heading { font-family:Georgia,"Noto Serif SC",serif; font-weight:500; }
 .life-section { padding:28px; margin-top:18px; border-color:rgba(92,70,52,.10); border-radius:var(--radius-xl); box-shadow:0 12px 34px rgba(88,61,41,.06); }
 .life-heading { padding-left:0; }

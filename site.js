@@ -42,6 +42,12 @@
 
   const normalize = value => value.replace(/\s+/g, " ").trim();
   const remember = el => { if (!el.dataset.en) el.dataset.en = normalize(el.textContent); };
+  const readStoredLanguage = () => {
+    try { return localStorage.getItem("site-language"); } catch (_) { return null; }
+  };
+  const storeLanguage = lang => {
+    try { localStorage.setItem("site-language", lang); } catch (_) { /* URL fallback below */ }
+  };
 
   function setLanguage(lang) {
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
@@ -72,8 +78,12 @@
     document.querySelectorAll("a[data-cv-link]").forEach(a => {
       a.href = lang === "zh" ? "files/CV_Ziyao Su_ 中文.pdf" : "files/CV_Ziyao Su_English.pdf";
     });
+    document.querySelectorAll(".nav-links a").forEach(a => {
+      const base = a.getAttribute("href").split("?")[0];
+      a.setAttribute("href", lang === "zh" ? `${base}?lang=zh` : base);
+    });
     document.title = document.title.replace(lang === "zh" ? "Publications" : "学术成果", lang === "zh" ? "学术成果" : "Publications").replace(lang === "zh" ? "Life" : "生活", lang === "zh" ? "生活" : "Life");
-    localStorage.setItem("site-language", lang);
+    storeLanguage(lang);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -89,7 +99,8 @@
       const zh = document.documentElement.lang.startsWith("zh");
       button.textContent = abstract.hidden ? (zh ? "摘要" : "Abstract") : (zh ? "收起摘要" : "Hide abstract");
     }));
-    setLanguage(localStorage.getItem("site-language") || "en");
+    const urlLanguage = new URLSearchParams(window.location.search).get("lang");
+    setLanguage(urlLanguage === "zh" ? "zh" : (readStoredLanguage() || "en"));
     requestAnimationFrame(() => document.body.classList.add("page-ready"));
   });
 })();
