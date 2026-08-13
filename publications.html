@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="publications.css" />
+  <link rel="stylesheet" href="refine.css" />
 </head>
   
 <body>
@@ -18,16 +19,17 @@
     <div class="nav-container">
       <a class="nav-name" href="index.html">Ziyao Su</a>
 
-      <div class="nav-links">        
-        <a href="publications.html" class="active">Publications</a>
-        <a href="life.html">Life</a>
-      </div>
+      <div class="nav-actions"><div class="nav-links">
+        <a href="index.html" data-en="Home" data-zh="首页">Home</a>
+        <a href="publications.html" class="active" data-en="Publications" data-zh="学术成果">Publications</a>
+        <a href="life.html" data-en="Life" data-zh="生活">Life</a>
+      </div><button class="language-toggle" type="button" aria-label="切换至中文"><span data-lang="en">EN</span><i></i><span data-lang="zh">中</span></button></div>
     </div>
   </nav>
 
   <main class="page-container">
     <header class="plain-page-header">
-      <h1>Publications</h1>
+      <h1 data-en="Publications" data-zh="学术成果">Publications</h1>
     </header>
     
 <!------------------------------------------ Upcoming ------------------------------------------>
@@ -516,25 +518,6 @@
   </footer>
 
     
-  <script>
-    document.querySelectorAll(".abstract-toggle").forEach((button) => {
-      button.addEventListener("click", () => {
-        const pubItem = button.closest(".pub-item");
-        const abstract = pubItem.querySelector(".pub-abstract");
-  
-        if (!abstract) return;
-  
-        const isHidden = abstract.hasAttribute("hidden");
-  
-        if (isHidden) {
-          abstract.removeAttribute("hidden");
-          button.textContent = "Hide abstract";
-        } else {
-          abstract.setAttribute("hidden", "");
-          button.textContent = "Abstract";
-        }
-      });
-    });
-  </script>
+  <script src="site.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
   <meta name="author" content="Ziyao Su" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="refine.css" />
 </head>
 
 <body>
@@ -17,10 +18,11 @@
     <div class="nav-container">
       <a class="nav-name" href="index.html">Ziyao Su</a>
 
-      <div class="nav-links">
-        <a href="publications.html">Publications</a>
-        <a href="life.html">Life</a>
-      </div>
+      <div class="nav-actions"><div class="nav-links">
+        <a href="index.html" class="active" data-en="Home" data-zh="首页">Home</a>
+        <a href="publications.html" data-en="Publications" data-zh="学术成果">Publications</a>
+        <a href="life.html" data-en="Life" data-zh="生活">Life</a>
+      </div><button class="language-toggle" type="button" aria-label="切换至中文"><span data-lang="en">EN</span><i></i><span data-lang="zh">中</span></button></div>
     </div>
   </nav>
 
@@ -30,18 +32,20 @@
         <img src="files/Profile1.jpg" alt="Ziyao Su" class="profile-photo" />
 
         <div class="hero-links">
-          <a href="files/Ziyao_Su_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="files/CV_Ziyao Su_English.pdf" data-cv-link target="_blank" rel="noopener noreferrer">CV</a>
           <span>|</span>
           <a href="mailto:su.775@buckeyemail.osu.edu">Email</a>
           <span>|</span>
           <a href="https://scholar.google.com/citations?user=xP8BkjIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <span>|</span>
+          <a href="https://vstvgn.github.io/index.html" target="_blank" rel="noopener noreferrer">ORCiD</a>
         </div>
       </div>
 
       <div class="hero-intro">
         <h1>Ziyao Su | 粟梓尧 </h1>
 
-        <p class="subtitle">
+        <p class="subtitle" data-translate>
           Hi! I am a PhD candidate in <a href="https://mse.osu.edu/" target="_blank" rel="noopener noreferrer">Materials Science and Engineering</a> at 
           <a href="https://osu.edu" target="_blank" rel="noopener noreferrer">The Ohio State University</a>. 
           I am currently working with <a href="https://people.engineering.osu.edu/people/chowdhury.24" target="_blank" rel="noopener noreferrer">Dr. Enam Chowdhury</a> 
@@ -56,12 +60,12 @@
 <!------------------------------------------ intro ------------------------------------------>
 
 <section id="intro" class="intro-section">
-  <h2>About Me</h2>
+  <h2 data-en="About Me" data-zh="关于我">About Me</h2>
 
   <div class="intro-grid">
     <div class="intro-card">
-      <span class="intro-label">Interest</span>
-      <p>
+      <span class="intro-label" data-en="Interest" data-zh="研究兴趣">Interest</span>
+      <p data-translate>
         My research focuses on modeling ultrashort-laser-induced damage, electron
         dynamics, field enhancement, and energy absorption in multilayer mirrors,
         gratings, and hybrid metal–dielectric coatings
@@ -69,8 +73,8 @@
     </div>
 
     <div class="intro-card">
-      <span class="intro-label">Goal</span>
-      <p>
+      <span class="intro-label" data-en="Goal" data-zh="研究目标">Goal</span>
+      <p data-translate>
         My goal is to develop practical simulation frameworks that explain
         ultrashort-laser damage mechanisms and support the design of more
         damage-resistant optical coatings and gratings for next-generation PW laser
@@ -79,7 +83,7 @@
     </div>
 
     <div class="intro-card">
-      <span class="intro-label">Collaboration</span>
+      <span class="intro-label" data-en="Collaboration" data-zh="合作">Collaboration</span>
       <p>
         I have collaborated with
         <a href="https://www.engr.colostate.edu/ece/people/carmen-menoni/" target="_blank" rel="noopener noreferrer">
@@ -100,7 +104,7 @@
 <!------------------------------------------ news ------------------------------------------>   
     
 <section id="news" class="news-section">
-  <h2>News</h2>
+  <h2 data-en="News" data-zh="近况">News</h2>
 
   <ul class="news-list">
 
@@ -149,11 +153,25 @@
   </ul>
 </section>
     
+<!------------------------------------------ academic service ------------------------------------------>
+<section id="service" class="service-section">
+  <div class="section-heading-row">
+    <div><span class="section-kicker" data-en="Peer Review" data-zh="同行评审">Peer Review</span><h2 data-en="Academic Service" data-zh="学术服务">Academic Service</h2></div>
+    <div class="service-count"><strong>8</strong><span data-en="reviews completed" data-zh="次审稿">reviews completed</span></div>
+  </div>
+  <ul class="service-list">
+    <li><span class="service-journal">Applied Optics</span><span class="service-years">2024 · 2025</span></li>
+    <li><span class="service-journal">Optics Express</span><span class="service-years">2026</span></li>
+    <li><span class="service-journal">Optics Letters</span><span class="service-years">2026</span></li>
+  </ul>
+  <p class="service-note" data-en="Journal reviewer · 8 review records in total" data-zh="期刊审稿人 · 累计完成 8 次审稿">Journal reviewer · 8 review records in total</p>
+</section>
+
 <!------------------------------------------ publications ------------------------------------------>
     
 <section id="publications">
-  <h2>Selected Publications</h2>
-  <h3>Journal Articles</h3>
+  <h2 data-en="Selected Publications" data-zh="代表性成果">Selected Publications</h2>
+  <h3 data-en="Journal Articles" data-zh="期刊论文">Journal Articles</h3>
 
   <ul class="publication-list compact-publications">
 <!-----------------------------------------
@@ -264,7 +282,7 @@
     </li>
   </ul>
 
-  <h3>Conference Proceedings</h3>
+  <h3 data-en="Conference Proceedings" data-zh="会议论文">Conference Proceedings</h3>
 
   <ul class="publication-list compact-publications">
     <li>
@@ -315,3 +333,8 @@
     </li>
   </ul>
 </section>
+  </main>
+  <footer class="site-footer">© 2026 Ziyao Su</footer>
+  <script src="site.js"></script>
+</body>
+</html>
