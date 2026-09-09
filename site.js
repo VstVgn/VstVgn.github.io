@@ -2,16 +2,16 @@
   const translations = {
     Publications: "学术成果", Life: "生活", "Academic Service": "学术服务",
     "About Me": "关于我", News: "近况", "Selected Publications": "代表性成果",
-    "Journal Articles": "期刊论文", "Conference Proceedings": "会议论文",
+    "Journal Articles": "期刊论文", "Conference Proceedings": "会议录",
     Interest: "研究兴趣", Goal: "研究目标", Collaboration: "合作",
     "Peer Review": "同行评审", "reviews completed": "次审稿",
     Upcoming: "即将发表", Journal: "期刊", "Under review": "审稿中",
-    "Manuscript in preparation for submission": "稿件准备投稿中",
+    "Manuscript in preparation for submission": "投稿中",
     Abstract: "摘要", "Hide abstract": "收起摘要",
     Sport: "运动", Music: "音乐", Dance: "舞蹈", "Table Tennis": "乒乓球",
     Background: "经历", Photo: "照片", Highlights: "高光时刻", Piano: "钢琴",
     Drum: "架子鼓", Composition: "作曲", "Latin Dance": "拉丁舞",
-    "Under Construction": "内容建设中", "Selected Compositions": "作品选集",
+    "Under Construction": "建设中", "Selected Compositions": "作品选集",
     "Now playing:": "正在播放："
   };
 
