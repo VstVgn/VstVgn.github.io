@@ -16,7 +16,7 @@
   };
 
   const contentTranslations = {
-    "hero-intro": `你好！我是<a href="https://mse.osu.edu/" target="_blank" rel="noopener noreferrer">材料科学与工程系</a>博士候选人，就读于<a href="https://osu.edu" target="_blank" rel="noopener noreferrer">俄亥俄州立大学</a>，师从 <a href="https://people.engineering.osu.edu/people/chowdhury.24" target="_blank" rel="noopener noreferrer">Enam Chowdhury 博士</a>，主要研究超快激光与物质相互作用的计算建模。我也在俄亥俄州立大学获得了物理学与数学双学士学位。`,
+    "hero-intro": `你好！我是<a href="https://mse.osu.edu/" target="_blank" rel="noopener noreferrer">材料科学与工程系</a>博士候选人，就读于<a href="https://osu.edu" target="_blank" rel="noopener noreferrer">俄亥俄州立大学</a>，导师是 <a href="https://people.engineering.osu.edu/people/chowdhury.24" target="_blank" rel="noopener noreferrer">Enam Chowdhury 博士</a>，主要研究超快激光与物质相互作用的计算建模。我也在俄亥俄州立大学获得了物理学与数学双学士学位。`,
     "research-interest": `我的研究聚焦于超短脉冲激光诱导损伤，以及多层反射镜、光栅和金属-介质混合涂层中的电子动力学、场增强与能量吸收的仿真建模。`,
     "research-goal": `我的目标是建立实用的仿真框架，解释超短脉冲激光损伤机制，并为下一代拍瓦级激光系统设计更耐损伤的光学涂层与光栅。`,
     collaboration: `我曾与<a href="https://www.engr.colostate.edu/ece/people/carmen-menoni/" target="_blank" rel="noopener noreferrer">科罗拉多州立大学 Carmen Menoni 博士团队</a>及 <a href="http://www.xuvlasers.com/welcome.html" target="_blank" rel="noopener noreferrer">XUV Lasers Inc.</a> 合作，验证多种光学元件的激光损伤阈值。我也期待与更多团队合作开展激光诱导损伤阈值建模与光学涂层设计优化。`,
