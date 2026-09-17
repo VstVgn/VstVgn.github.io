@@ -40,6 +40,7 @@ section h2 { display:flex; align-items:center; gap:10px; width:fit-content; marg
 section h2::before { display:block; position:static; flex:0 0 18px; content:""; width:18px; height:1px; margin:0; background:currentColor; opacity:.6; }
 section h2::after { content:""; position:absolute; left:28px; bottom:0; width:46px; height:2px; margin:0; border-radius:9px; background:linear-gradient(90deg,currentColor,transparent); opacity:.45; }
 a { font-weight:700; }
+.author-highlight { text-decoration-line:underline; text-decoration-thickness:1.5px; text-underline-offset:3px; text-decoration-color:currentColor; }
 .intro-grid { grid-template-columns:repeat(3,1fr); gap:10px; }
 .intro-card { position:relative; padding:20px 18px 18px; border-radius:12px; box-shadow:none; border-color:var(--border); background:rgba(255,255,255,.60); backdrop-filter:blur(12px); overflow:hidden; }
 .intro-card::after { content:""; position:absolute; top:0; left:0; width:42px; height:2px; background:linear-gradient(90deg,var(--primary),#8da69e); }

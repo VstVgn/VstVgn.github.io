@@ -22,6 +22,7 @@
     collaboration: `我曾与<a href="https://www.engr.colostate.edu/ece/people/carmen-menoni/" target="_blank" rel="noopener noreferrer">科罗拉多州立大学 Carmen Menoni 博士团队</a>及 <a href="http://www.xuvlasers.com/welcome.html" target="_blank" rel="noopener noreferrer">XUV Lasers Inc.</a> 合作，验证多种光学元件的激光损伤阈值。我也期待与更多团队合作开展激光诱导损伤阈值建模与光学涂层设计优化。`,
     "news-talk": `受邀为罗切斯特大学的 <a href="https://www.lle.rochester.edu/" target="_blank">Laboratory for Laser Energetics</a> 作线上报告：“2D FDTD Modeling of Ultrashort Laser-Matter Interactions”。`,
     "news-award": `凭借<a href="https://doi.org/10.1117/12.3071987" target="_blank" rel="noopener noreferrer">“Keldysh ionization based-FDTD modeling of laser-induced damage threshold of MLD-IBS compression gratings for petawatt 2 μm laser systems”</a>，获得 <a href="https://spie.org/conferences-and-exhibitions/laser-damage" target="_blank">SPIE Laser-Induced Damage in Optical Materials 2025</a> MJ Soileau 最佳学生论文奖。[<a href="https://mse.osu.edu/news/2026/03/mse-doctoral-candidate-ziyao-su-receives-best-student-paper-award" target="_blank">OSU 新闻</a>]`,
+    "news-cover": `参与制作 <a href="https://opg.optica.org/ome/issue.cfm?volume=15&issue=2" target="_blank" rel="noopener noreferrer">Optical Materials Express 2025 年 2 月刊</a>的封面。[<a href="https://mse.osu.edu/news/2025/02/work-mse-doctoral-candidates-featured-cover-optical-materials-express" target="_blank" rel="noopener noreferrer">OSU 新闻</a>]。`,
     "news-candidacy": `通过博士候选资格考试。论文委员会成员：<a href="https://people.engineering.osu.edu/people/chowdhury.24" target="_blank" rel="noopener noreferrer">Enam Chowdhury 博士</a>、<a href="https://people.engineering.osu.edu/people/windl.1" target="_blank" rel="noopener noreferrer">Wolfgang Windl 博士</a>、<a href="https://people.engineering.osu.edu/people/ghazisaeidi.1" target="_blank" rel="noopener noreferrer">Maryam Ghazisaeidi 博士</a>和 <a href="https://people.engineering.osu.edu/people/hwang.458" target="_blank" rel="noopener noreferrer">Jinwoo Hwang 博士</a>。`,
     "news-phd": `在<a href="https://osu.edu" target="_blank" rel="noopener noreferrer">俄亥俄州立大学</a><a href="https://mse.osu.edu/" target="_blank" rel="noopener noreferrer">材料科学与工程系</a>开始博士阶段学习，导师为 <a href="https://people.engineering.osu.edu/people/chowdhury.24" target="_blank" rel="noopener noreferrer">Enam Chowdhury 博士</a>。`,
     "table-tennis": `我从 7 岁起接受了约三年的乒乓球训练，教练为<a href="https://www.douyin.com/user/MS4wLjABAAAAonDPc5VkkgLb9TlkUxZpwA0_EYXYhEQ-IQcuhXt2RG0?from_tab_name=main&vid=7644897827390778233" target="_blank" rel="noopener noreferrer">张积亮</a>——前河南省队运动员，曾于 2004 至 2007 年在台湾训练奥运选手。经历一段较长的停训后，我在大学期间重新开始打球，目前常在<a href="https://www.columbustabletennisclub.org/" target="_blank" rel="noopener noreferrer">哥伦布乒乓球俱乐部（CTTC）</a>训练，也偶尔前往<a href="https://www.matchpointpickleballclub.com/table-tennis" target="_blank" rel="noopener noreferrer">Matchpoint 俱乐部</a>。我是<a href="https://www.usatt.org/" target="_blank" rel="noopener noreferrer">美国乒乓球协会（USATT）</a>注册球员，并曾代表俄亥俄州立大学参加<a href="https://www.nctta.org/" target="_blank" rel="noopener noreferrer">美国大学乒乓球协会（NCTTA）</a>联赛。`,
@@ -33,13 +34,6 @@
   };
 
   const normalize = value => value.replace(/\s+/g, " ").trim();
-  const readStoredLanguage = () => {
-    try { return localStorage.getItem("site-language"); } catch (_) { return null; }
-  };
-  const storeLanguage = lang => {
-    try { localStorage.setItem("site-language", lang); } catch (_) { /* URL fallback below */ }
-  };
-
   function setLanguage(lang) {
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     document.body.classList.toggle("lang-zh", lang === "zh");
@@ -69,12 +63,14 @@
       a.setAttribute("href", lang === "zh" ? `${base}?lang=zh` : base);
     });
     document.title = document.title.replace(lang === "zh" ? "Publications" : "学术成果", lang === "zh" ? "学术成果" : "Publications").replace(lang === "zh" ? "Life" : "生活", lang === "zh" ? "生活" : "Life");
-    storeLanguage(lang);
   }
 
   const initialize = () => {
     document.querySelectorAll(".horizontal-photo-strip figcaption").forEach((el, index) => el.dataset.contentKey = `photo-${index + 1}`);
     document.querySelectorAll(".championship-text").forEach((el, index) => el.dataset.contentKey = `win-${index + 1}`);
+    document.querySelectorAll(".pub-authors strong, .pub-author-line strong").forEach(author => {
+      if (normalize(author.textContent) === "Ziyao Su") author.classList.add("author-highlight");
+    });
     const toggle = document.querySelector(".language-toggle");
     toggle?.addEventListener("click", () => setLanguage(document.documentElement.lang.startsWith("zh") ? "en" : "zh"));
     document.querySelectorAll(".nav-links a").forEach(a => a.addEventListener("click", event => {
@@ -92,7 +88,7 @@
       button.textContent = abstract.hidden ? (zh ? "摘要" : "Abstract") : (zh ? "收起摘要" : "Hide abstract");
     }));
     const urlLanguage = new URLSearchParams(window.location.search).get("lang");
-    setLanguage(urlLanguage === "zh" ? "zh" : (readStoredLanguage() || "en"));
+    setLanguage(urlLanguage === "zh" ? "zh" : "en");
     requestAnimationFrame(() => document.body.classList.add("page-ready"));
   };
 
