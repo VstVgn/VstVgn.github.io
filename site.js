@@ -35,6 +35,44 @@
 
   const normalize = value => value.replace(/\s+/g, " ").trim();
 
+  const abbreviateAuthorName = name => {
+    const parts = normalize(name).split(" ");
+    if (parts.length < 2) return name;
+    const surname = parts.pop();
+    const initials = parts.map(part => {
+      if (/^[A-Z](?:\.-?[A-Z])?\.?$/.test(part)) return part.endsWith(".") ? part : `${part}.`;
+      return part.split("-").map(piece => `${piece.charAt(0).toUpperCase()}.`).join("-");
+    });
+    return `${initials.join(" ")} ${surname}`;
+  };
+
+  const abbreviateAuthorList = authors =>
+    authors.split(/\s+and\s+/).map(abbreviateAuthorName).join(" and ");
+
+  const knownFullAuthorNames = [
+    "Mohamed Yaseen Noor", "Enam A. Chowdhury", "Carmen S. Menoni",
+    "Joseph R. Smith", "Vitaly E. Gruzdev", "Ziyao Su", "Johnny Eschbach",
+    "Ravleen Kaur", "Andy Lee", "Conrad Kuz", "Turan Erdogan", "Doug Smith",
+    "Emma DeAngelis", "Fariha Musarrat", "Alok Sutradhar", "Milo Eder",
+    "Justin Twardowski", "Alphonse Marra", "Michael Chini", "Zenghu Chang",
+    "Christopher Chae", "Sadikul Alam", "Hantian Gao", "Liam Clink",
+    "Leonard Brillson", "Jinwoo Hwang", "Simin Zhang", "Charles Varin",
+    "Adam Fisher", "Ryan Siebenaller"
+  ];
+
+  function initializeAuthorNames() {
+    document.querySelectorAll(".pub-authors, .pub-author-line").forEach(container => {
+      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode);
+      textNodes.forEach(node => {
+        knownFullAuthorNames.forEach(name => {
+          node.nodeValue = node.nodeValue.split(name).join(abbreviateAuthorName(name));
+        });
+      });
+    });
+  }
+
   const journalMetrics = {
     Optica: { impact: "8.8", jcr: "Q1", rising: "Q1", top: true },
     "Optics Letters": { impact: "3.3", jcr: "Q2", rising: "Q2", top: false },
@@ -48,11 +86,11 @@
     "10.1364/ol.608170": { author: "Ziyao Su and Enam A. Chowdhury", journal: "Opt. Lett.", volume: "51", number: "15", pages: "4236--4239", publisher: "Optica Publishing Group", month: "Aug" },
     "10.1017/hpl.2026.10161": { author: "Ziyao Su and Enam A. Chowdhury", journal: "High Power Laser Sci. Eng.", volume: "14", pages: "1--17", publisher: "Cambridge University Press" },
     "10.1364/cleo_at.2026.jw1.123": { author: "Ziyao Su and Enam A. Chowdhury", booktitle: "CLEO 2026", pages: "JW1.123", publisher: "Optica Publishing Group" },
-    "10.1021/acsami.5c16451": { author: "Emma DeAngelis and Christopher Chae and Sadikul Alam and Hantian Gao and Mohamed Y. Noor and Ziyao Su and Liam Clink and Leonard Brillson and Jinwoo Hwang and Enam Chowdhury", journal: "ACS Appl. Mater. Interfaces", volume: "18", number: "1", pages: "2892--2904", publisher: "American Chemical Society", month: "Jan" },
+    "10.1021/acsami.5c16451": { author: "Emma DeAngelis and Christopher Chae and Sadikul Alam and Hantian Gao and Mohamed Yaseen Noor and Ziyao Su and Liam Clink and Leonard Brillson and Jinwoo Hwang and Enam A. Chowdhury", journal: "ACS Appl. Mater. Interfaces", volume: "18", number: "1", pages: "2892--2904", publisher: "American Chemical Society", month: "Jan" },
     "10.1117/12.3071987": { citationKey: "Su2025Keldysh", author: "Ziyao Su and Mohamed Yaseen Noor and Emma DeAngelis and Carmen S. Menoni and Enam A. Chowdhury", title: "Keldysh ionization based-FDTD modeling of laser-induced damage threshold of MLD-IBS compression gratings for petawatt 2 µm laser systems", titleBraces: 2, volume: "PC13729", booktitle: "Laser-Induced Damage in Optical Materials 2025", editor: "Christopher Wren Carr and Carmen S. Menoni and Michael D. Thomas and Marco Jup{\\'e}", organization: "International Society for Optics and Photonics", publisher: "SPIE", pages: "PC1372907", keywords: "FDTD, LIDT, Grating, Keldysh photoionization" },
     "10.1017/hpl.2025.10041": { author: "Joseph R. Smith and Ziyao Su and Simin Zhang and Charles Varin and Vitaly E. Gruzdev and Enam A. Chowdhury", journal: "High Power Laser Sci. Eng.", volume: "13", pages: "e60", publisher: "Cambridge University Press" },
-    "10.1117/12.3033000": { citationKey: "Su2024Electron", author: "Ziyao Su and Joseph Smith and Enam Chowdhury", title: "Electron dynamics of femtosecond laser induced plasma inside multilayer dielectric high reflectors studied using particle-in-cell (PIC) approach", titleBraces: 2, volume: "PC13190", booktitle: "Laser-Induced Damage in Optical Materials 2024", editor: "Christopher Wren Carr and Detlev Ristau and Carmen S. Menoni and Michael D. Thomas", organization: "International Society for Optics and Photonics", publisher: "SPIE", pages: "PC1319006", keywords: "Particle in Cell, Keldysh Ionization, plasma, multi-layer dielectric mirror, ultrashort few-cycle pulse, thermalization" },
-    "10.1117/12.3032774": { citationKey: "Fisher2024Plasma", author: "Adam Fisher and Ryan Siebenaller and Emma DeAngelis and Mohamed Yaseen and Conrad Kuz and Justin Twardowski and Milo Eder and Su Ziyao and Enam Chowdhury", title: "Study of plasma dynamics of femtosecond laser damage in metal thiophosphates", titleBraces: 2, volume: "PC13190", booktitle: "Laser-Induced Damage in Optical Materials 2024", editor: "Christopher Wren Carr and Detlev Ristau and Carmen S. Menoni and Michael D. Thomas", organization: "International Society for Optics and Photonics", publisher: "SPIE", pages: "PC131900Q", keywords: "femtosecond laser damge, pump probe microscopy, 2D material, van der Waals layered material, plasma dynamics, atomic force microscopy" },
+    "10.1117/12.3033000": { citationKey: "Su2024Electron", author: "Ziyao Su and Joseph R. Smith and Enam A. Chowdhury", title: "Electron dynamics of femtosecond laser induced plasma inside multilayer dielectric high reflectors studied using particle-in-cell (PIC) approach", titleBraces: 2, volume: "PC13190", booktitle: "Laser-Induced Damage in Optical Materials 2024", editor: "Christopher Wren Carr and Detlev Ristau and Carmen S. Menoni and Michael D. Thomas", organization: "International Society for Optics and Photonics", publisher: "SPIE", pages: "PC1319006", keywords: "Particle in Cell, Keldysh Ionization, plasma, multi-layer dielectric mirror, ultrashort few-cycle pulse, thermalization" },
+    "10.1117/12.3032774": { citationKey: "Fisher2024Plasma", author: "Adam Fisher and Ryan Siebenaller and Emma DeAngelis and Mohamed Yaseen Noor and Conrad Kuz and Justin Twardowski and Milo Eder and Ziyao Su and Enam A. Chowdhury", title: "Study of plasma dynamics of femtosecond laser damage in metal thiophosphates", titleBraces: 2, volume: "PC13190", booktitle: "Laser-Induced Damage in Optical Materials 2024", editor: "Christopher Wren Carr and Detlev Ristau and Carmen S. Menoni and Michael D. Thomas", organization: "International Society for Optics and Photonics", publisher: "SPIE", pages: "PC131900Q", keywords: "femtosecond laser damge, pump probe microscopy, 2D material, van der Waals layered material, plasma dynamics, atomic force microscopy" },
     "10.1364/cleo_si.2024.sf3h.5": { author: "Ziyao Su and Joseph R. Smith and Enam A. Chowdhury", booktitle: "CLEO 2024", pages: "SF3H.5", publisher: "Optica Publishing Group" },
     "10.1364/ol.483581": { author: "Simin Zhang and Ziyao Su and Carmen S. Menoni and Enam A. Chowdhury", journal: "Opt. Lett.", volume: "48", number: "5", pages: "1212--1215", publisher: "Optica Publishing Group", month: "Mar", url: "https://opg.optica.org/ol/abstract.cfm?URI=ol-48-5-1212" },
     "10.1364/cleo_si.2022.sf3l.3": { author: "Simin Zhang and Ziyao Su and Carmen S. Menoni and Enam A. Chowdhury", booktitle: "Conference on Lasers and Electro-Optics", pages: "SF3L.3", publisher: "Optica Publishing Group" }
@@ -91,7 +129,7 @@
     const doiUrl = item.querySelector('a[href*="doi.org/"]')?.href || "";
     const doi = doiUrl.replace(/^https?:\/\/(dx\.)?doi\.org\//, "");
     const metadata = publicationMetadata[doi.toLowerCase()] || {};
-    const authors = metadata.author || fallbackAuthors;
+    const authors = abbreviateAuthorList(metadata.author || fallbackAuthors);
     const firstAuthor = authors.split(/\s+and\s+/)[0] || "Su";
     const surname = (firstAuthor.match(/[A-Za-zÀ-ÖØ-öø-ÿ'-]+$/) || ["Su"])[0].replace(/[^A-Za-z0-9]/g, "");
     const stopwords = new Set(["the", "and", "with", "from", "into", "based", "using", "study", "modeling", "modelling"]);
@@ -298,11 +336,12 @@
 
   const initialize = () => {
     initializeNews();
+    initializeAuthorNames();
     initializePublicationTools();
     document.querySelectorAll(".horizontal-photo-strip figcaption").forEach((el, index) => el.dataset.contentKey = `photo-${index + 1}`);
     document.querySelectorAll(".championship-text").forEach((el, index) => el.dataset.contentKey = `win-${index + 1}`);
     document.querySelectorAll(".pub-authors strong, .pub-author-line strong").forEach(author => {
-      if (normalize(author.textContent) === "Ziyao Su") author.classList.add("author-highlight");
+      if (["Ziyao Su", "Z. Su"].includes(normalize(author.textContent))) author.classList.add("author-highlight");
     });
     const toggle = document.querySelector(".language-toggle");
     toggle?.addEventListener("click", () => setLanguage(document.documentElement.lang.startsWith("zh") ? "en" : "zh"));
