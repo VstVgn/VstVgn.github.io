@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="publications.css" />
-  <link rel="stylesheet" href="refine.css?v=20260917-1" />
+  <link rel="stylesheet" href="refine.css?v=20261030-9" />
 </head>
   
 <body>
@@ -106,7 +106,7 @@
         </li>      
          
 
-        <li class="pub-item">
+        <li class="pub-item" data-keep-links>
           <div class="pub-venue">Journal · Physics of Plasmas</div>
           <div class="pub-title">
             Effect of Front Surface Engineering on High Energy Electron, X-ray and
@@ -121,10 +121,50 @@
           </div>
           <div class="pub-meta">Under review</div>
           <div class="pub-links">
-            <a href="https://doi.org/10.48550/arXiv.2603.06809" target="_blank">
-              arXiv
-            </a>
+            <a class="pub-action" href="https://doi.org/10.48550/arXiv.2603.06809" target="_blank" rel="noopener noreferrer" data-en="Preprint" data-zh="预印本">Preprint</a>
           </div> 
+        </li>
+
+        <li class="pub-item" data-keep-links>
+          <div class="pub-venue">Proceeding · SPIE Laser-Induced Damage in Optical Materials 2026</div>
+          <div class="pub-title">
+            Keldysh-Ionization-Based FDTD Modeling and Bayesian Optimization of Laser-Induced Damage Thresholds in Hybrid Gratings
+          </div>
+          <div class="pub-authors">
+            <strong>Ziyao Su</strong>, Johnny Eschbach, and Enam A. Chowdhury
+          </div>
+          <div class="pub-meta" data-en="Publishing" data-zh="出版中">Publishing</div>
+          <div class="pub-links">
+            <span class="pub-badge badge-conference" data-en="Conference" data-zh="会议">Conference</span>
+            <button class="abstract-toggle" type="button" data-en="Abstract" data-zh="摘要">Abstract</button>
+            <span class="pub-action is-unavailable" aria-disabled="true" data-en="Slides" data-zh="幻灯片" data-pending-file="assets/documents/slides/spie-2026-keldysh-fdtd-bayesian-optimization.pdf">Slides</span>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>
+              We establish a computational framework for modeling and optimizing ultrafast laser-induced damage thresholds (LIDT) in hybrid multilayer dielectric gratings. The framework combines a customized two-dimensional finite-difference time-domain (FDTD) model with dynamic linear and nonlinear absorption models, including photoionization, impact ionization, collision processes, and Drude free-carrier response. Using this approach, we modeled three representative hybrid grating designs over pulse durations from 10 fs to 500 fs and evaluated their LIDT scaling behavior through power-law analysis. The simulations agree with reported experimental LIDT values and predict scaling exponents between 0.37 and 0.63. We further integrated rigorous coupled-wave analysis (RCWA) with Bayesian optimization to improve the diffraction performance and predicted LIDT of the three designs. This work establishes a unified modeling and optimization framework for predicting pulse-duration-dependent damage and guiding the design of high-efficiency, high-LIDT gratings for petawatt-class laser systems.
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item" data-keep-links>
+          <div class="pub-venue">Proceeding · SPIE Laser-Induced Damage in Optical Materials 2026</div>
+          <div class="pub-title">
+            Machine Learning Optimization of Diffraction Efficiency and LIDT for MLD Gratings for High Intensity Lasers
+          </div>
+          <div class="pub-authors">
+            Johnny Eschbach, <strong>Ziyao Su</strong>, and Enam A. Chowdhury
+          </div>
+          <div class="pub-meta" data-en="Publishing" data-zh="出版中">Publishing</div>
+          <div class="pub-links">
+            <span class="pub-badge badge-conference" data-en="Conference" data-zh="会议">Conference</span>
+            <button class="abstract-toggle" type="button" data-en="Abstract" data-zh="摘要">Abstract</button>
+            <span class="pub-action is-unavailable" aria-disabled="true" data-en="Slides" data-zh="幻灯片">Slides</span>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>
+              This work optimizes the geometry and operating conditions of a SiO<sub>2</sub>/HfO<sub>2</sub> multilayer dielectric (MLD) grating designed for a 1.95-micrometer, 70-femtosecond, s-polarized laser pulse. This grating design is prevalent in plans for future laser drivers for lithography and particle accelerators. Maximizing the efficiency and laser-induced damage threshold (LIDT) of state-of-the-art designs stands to prevent significant costs associated with wasted power and optical component damage. We utilize the optical simulation method rigorous coupled-wave analysis (RCWA) to evaluate the first-order diffraction efficiency. In addition, our 2D finite-difference time-domain (FDTD) framework incorporates free-carrier dynamics models to predict spatial electron density as a proxy for LIDT. To optimize the grating duty cycle, pillar height, and laser angle of incidence, we implement a Bayesian optimization routine using Upper Confidence Bound and the Constant Liar algorithm for parallelized evaluation. Optimal design parameters show a 20% reduction in peak electron density from current designs and an improvement in peak diffraction efficiency.
+            </p>
+          </div>
         </li>
 
 <!-----------------------------------------
@@ -146,16 +186,13 @@
           <div class="pub-authors">
             <strong>Ziyao Su</strong> and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">Optics Letters, vol. 51, p. 4236-4239, 2026</div>
           <div class="pub-links">
             <a href="https://doi.org/10.1364/OL.608170" target="_blank">
               DOI
             </a>
-            <span class="pub-link-separator">|</span>
             <a href="https://doi.org/10.48550/arXiv.2606.11395" target="_blank">
               arXiv
             </a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
           </div> 
 
@@ -172,17 +209,6 @@
             </p>
           </div>          
         </li>  
-          
-          <div class="pub-abstract" hidden>
-            <p>
-              We present a 2D FDTD-based framework for sub-ps laser interaction with hybrid
-              metal-dielectric gratings, incorporating Keldysh photoionization and impact
-              ionization to predict ultrafast electron dynamics, field enhancement, and
-              damage initiation.
-            </p>
-          </div>
-        </li>
-
         <li class="pub-item">
           <div class="pub-venue">Journal · High Power Laser Science and Engineering</div>
           <div class="pub-title">
@@ -192,10 +218,8 @@
           <div class="pub-authors">
             <strong>Ziyao Su</strong> and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">High Power Laser Science and Engineering, vol. 14, p. e78, 2026</div>
           <div class="pub-links">
             <a href="https://doi.org/10.1017/hpl.2026.10161" target="_blank" rel="noopener noreferrer">DOI</a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
           </div>
           
@@ -230,12 +254,10 @@
           <div class="pub-authors">
             <strong>Ziyao Su</strong> and Enam A. Chowdhury
           </div>
-          <div class="pub-meta"> CLEO 2026, Technical Digest Series, paper JW1.123
-	  </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1364/CLEO_AT.2026.JW1.123" target="_blank" rel="noopener noreferrer">DOI</a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
+            <a href="assets/documents/slides/cleo-2026-fdtd-hybrid-grating.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           <div class="pub-abstract" hidden>
             <p>
@@ -243,6 +265,7 @@
 		and impact ionization to predict ultrafast electron dynamics, field enhancement, and damage initiation.
             </p>
           </div>
+        </li>
 
 
         <li class="pub-item">
@@ -254,10 +277,8 @@
             E. DeAngelis, C. Chae, S. Alam, H. Gao, M. Y. Noor,
             <strong>Ziyao Su</strong>, L. Brillson, J. Hwang, and E. Chowdhury
           </div>
-          <div class="pub-meta">ACS Applied Materials & Interfaces, vol. 18 (1), p. 2892-2904, 2026</div>
           <div class="pub-links">
             <a href="https://doi.org/10.1021/acsami.5c16451" target="_blank">DOI</a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
           </div>
           
@@ -309,13 +330,10 @@
             <strong>Ziyao Su</strong>, Mohamed Yaseen Noor, Emma DeAngelis,
             Carmen S. Menoni, and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">
-            SPIE Laser-Induced Damage in Optical Materials 2025, PC1372907
-          </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1117/12.3071987" target="_blank">DOI</a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
+            <a href="assets/documents/slides/spie-2025-keldysh-fdtd-mld-ibs-gratings.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           
           <div class="pub-abstract" hidden>
@@ -349,10 +367,8 @@
             Joseph R. Smith, <strong>Ziyao Su</strong>, Simin Zhang,
             Charles Varin, Vitaly E. Gruzdev, and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">High Power Laser Science and Engineering, vol. 13, p. e60, 2025</div>
           <div class="pub-links">
             <a href="https://doi.org/10.1017/hpl.2025.10041" target="_blank">DOI</a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
           </div>
           
@@ -392,13 +408,10 @@
           <div class="pub-authors">
             <strong>Ziyao Su</strong>, Joseph R. Smith, and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">
-            SPIE Laser-Induced Damage in Optical Materials 2024, PC1319006
-          </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1117/12.3033000" target="_blank">DOI</a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
+            <a href="assets/documents/slides/spie-2024-electron-dynamics-pic.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           
           <div class="pub-abstract" hidden>
@@ -429,15 +442,12 @@
           <div class="pub-authors">
             <strong>Ziyao Su</strong>, Joseph R. Smith, and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">
-            CLEO 2024, Technical Digest Series, paper SF3H.5
-          </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1364/CLEO_SI.2024.SF3H.5" target="_blank">
               DOI
             </a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
+            <a href="assets/documents/slides/cleo-2024-electron-dynamics-pic.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           
           <div class="pub-abstract" hidden>
@@ -469,10 +479,8 @@
             Simin Zhang, <strong>Ziyao Su</strong>, Carmen S. Menoni,
             and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">Optics Letters, vol. 48, p. 1212–1215, 2023</div>
           <div class="pub-links">
             <a href="https://doi.org/10.1364/OL.483581" target="_blank">DOI</a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
           </div>
           
@@ -514,14 +522,10 @@
             Simin Zhang, <strong>Ziyao Su</strong>, Carmen S. Menoni,
             and Enam A. Chowdhury
           </div>
-          <div class="pub-meta">
-            CLEO 2022, Technical Digest Series, paper SF3L.3
-          </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1364/CLEO_SI.2022.SF3L.3" target="_blank">
               DOI
             </a>
-            <span class="pub-link-separator">|</span>
             <button class="abstract-toggle" type="button">Abstract</button>
           </div>
           
@@ -545,6 +549,6 @@
   </footer>
 
     
-  <script src="site.js?v=20260917-2"></script>
+  <script src="site.js?v=20261030-15"></script>
 </body>
 </html>

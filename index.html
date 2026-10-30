@@ -11,7 +11,7 @@
   <script>document.documentElement.lang=new URLSearchParams(location.search).get('lang')==='zh'?'zh-CN':'en'</script>
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="refine.css?v=20260917-1" />
+  <link rel="stylesheet" href="refine.css?v=20261030-9" />
 </head>
 
 <body>
@@ -25,21 +25,64 @@
     </div>
   </nav>
 
-  <main class="container">
-    <header class="home-hero">
+  <main class="container home-layout">
+    <aside class="profile-sidebar">
       <div class="hero-photo-block">
-        <img src="files/Profile1.jpg" alt="Ziyao Su" class="profile-photo" />
+        <img src="assets/images/profile/ziyao-su.jpg" alt="Ziyao Su" class="profile-photo" />
 
-        <div class="hero-links">
-          <a href="files/ZiyaoSu_CV_English.pdf" data-cv-link target="_blank" rel="noopener noreferrer">CV</a>
-          <span>|</span>
-          <a href="mailto:su.775@buckeyemail.osu.edu">Email</a>
-          <span>|</span>
-          <a href="https://scholar.google.com/citations?user=xP8BkjIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-          <span>|</span>
-          <a href="https://orcid.org/0009-0007-4536-7956" target="_blank" rel="noopener noreferrer">ORCiD</a>
+        <div class="hero-links" aria-label="Profile links">
+          <a href="assets/documents/ziyao-su-cv-en.pdf" data-cv-link target="_blank" rel="noopener noreferrer" aria-label="Curriculum Vitae" data-tooltip-en="CV" data-tooltip-zh="简历"><img src="assets/icons/cv.svg" alt="" /></a>
+          <a href="mailto:su.775@buckeyemail.osu.edu" aria-label="Email" data-tooltip-en="Email" data-tooltip-zh="邮箱"><img src="assets/icons/email.svg" alt="" /></a>
+          <a href="https://scholar.google.com/citations?user=xP8BkjIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" data-tooltip-en="Google Scholar" data-tooltip-zh="谷歌学术"><img src="assets/icons/scholar.svg" alt="" /></a>
+          <a href="https://orcid.org/0009-0007-4536-7956" target="_blank" rel="noopener noreferrer" aria-label="ORCID" data-tooltip-en="ORCID" data-tooltip-zh="ORCID"><img src="assets/icons/orcid.svg" alt="" /></a>
         </div>
       </div>
+
+      <section id="service" class="service-section sidebar-service">
+        <h2 data-en="Academic Service" data-zh="学术服务">Academic Service</h2>
+        <ul class="service-points">
+        <li class="service-group">
+          <h3 data-en="Journal Reviewer" data-zh="期刊审稿">Journal Reviewer</h3>
+          <span class="service-summary" data-en="10 manuscripts reviewed" data-zh="共审阅 10 篇稿件">10 manuscripts reviewed</span>
+          <ul class="service-details">
+            <li><span>Applied Optics</span><small>2024 · 2025</small></li>
+            <li><span>Optics Express</span><small>2026</small></li>
+            <li><span>Optics Letters</span><small>2026</small></li>
+            <li><span>Optical Materials Express</span><small>2026</small></li>
+          </ul>
+        </li>
+        <li class="service-group">
+          <h3 data-en="Instructional Assistant" data-zh="教学助理">Instructional Assistant</h3>
+          <ul class="service-details service-courses">
+            <li data-en="MSE 2010 · Introduction to Engineering Materials &lt;small&gt;Fall 2024&lt;/small&gt;" data-zh="MSE 2010 · 工程材料导论 &lt;small&gt;2024 秋季&lt;/small&gt;">MSE 2010 · Introduction to Engineering Materials <small>Fall 2024</small></li>
+            <li data-en="MSE 3331 · Materials Science and Engineering Laboratory I &lt;small&gt;Fall 2025&lt;/small&gt;" data-zh="MSE 3331 · 材料科学与工程实验 I &lt;small&gt;2025 秋季&lt;/small&gt;">MSE 3331 · Materials Science and Engineering Laboratory I <small>Fall 2025</small></li>
+          </ul>
+        </li>
+        <li class="service-group">
+          <h3 data-en="Professional Memberships" data-zh="专业会员">Professional Memberships</h3>
+          <ul class="service-details service-memberships">
+            <li><a href="https://www.aps.org/" target="_blank" rel="noopener noreferrer" data-en="American Physical Society (APS)" data-zh="美国物理学会（APS）">American Physical Society (APS)</a></li>
+            <li><a href="https://www.spie.org/" target="_blank" rel="noopener noreferrer">SPIE</a></li>
+            <li><a href="https://org.osu.edu/spie/" target="_blank" rel="noopener noreferrer" data-en="SPIE OSU Student Chapter" data-zh="SPIE 俄亥俄州立大学学生分会">SPIE OSU Student Chapter</a></li>
+          </ul>
+        </li>
+        </ul>
+      </section>
+
+      <div class="sidebar-visitors">
+        <span class="section-kicker" data-en="Visitors" data-zh="访客分布">Visitors</span>
+        <div class="visitor-map" aria-label="Live visitor map">
+          <span class="map-widget-fallback" data-en="Live map loads on the published site" data-zh="实时地图将在网站发布后加载">Live map loads on the published site</span>
+          <script id="_wau17t">var _wau = _wau || []; _wau.push(["map", "cp20us5upj", "17t", "190", "95", "night", "cross-pink"]);</script>
+          <script async src="https://waust.at/m.js"></script>
+        </div>
+        <img class="visitor-count" src="https://api.visitorbadge.io/api/visitors?path=vstvgn.github.io%2Fsite-total-v1&amp;label=Views%20%7C%20%E6%B5%8F%E8%A7%88%E9%87%8F&amp;labelColor=%23e8edf2&amp;countColor=%23315f8c" alt="Total page views" loading="lazy" />
+        <p class="last-updated" data-en="Last updated · October 30, 2026" data-zh="最近更新 · 2026 年 10 月 30 日">Last updated · October 30, 2026</p>
+      </div>
+    </aside>
+
+    <div class="home-content">
+    <header class="home-hero">
 
       <div class="hero-intro">
         <h1>Ziyao Su | 粟梓尧 </h1>
@@ -48,57 +91,12 @@
           Hi! I am a PhD candidate in <a href="https://mse.osu.edu/" target="_blank" rel="noopener noreferrer">Materials Science and Engineering</a> at 
           <a href="https://osu.edu" target="_blank" rel="noopener noreferrer">The Ohio State University</a>. 
           I am currently working with <a href="https://people.engineering.osu.edu/people/chowdhury.24" target="_blank" rel="noopener noreferrer">Dr. Enam Chowdhury</a> 
-          on computational modeling of ultrafast laser–matter interactions. 
-          I received my B.S. degrees in Physics and Mathematics at OSU as well.
+          on computational modeling of ultrafast laser–matter interactions. My research aims to build practical simulation frameworks that clarify ultrashort-laser damage mechanisms and guide the design of more damage-resistant optical coatings and gratings for next-generation petawatt laser systems. I also received my B.S. degrees in Physics and Mathematics from OSU.
         </p>
         
       </div>
     </header>
 
-
-<!------------------------------------------ intro ------------------------------------------>
-
-<section id="intro" class="intro-section">
-  <h2 data-en="About Me" data-zh="关于我">About Me</h2>
-
-  <div class="intro-grid">
-    <div class="intro-card">
-      <span class="intro-label" data-en="Interest" data-zh="研究兴趣">Interest</span>
-      <p data-content-key="research-interest">
-        My research focuses on modeling ultrashort-laser-induced damage, electron
-        dynamics, field enhancement, and energy absorption in multilayer mirrors,
-        gratings, and hybrid metal–dielectric coatings
-      </p>
-    </div>
-
-    <div class="intro-card">
-      <span class="intro-label" data-en="Goal" data-zh="研究目标">Goal</span>
-      <p data-content-key="research-goal">
-        My goal is to develop practical simulation frameworks that explain
-        ultrashort-laser damage mechanisms and support the design of more
-        damage-resistant optical coatings and gratings for next-generation PW laser
-        systems.
-      </p>
-    </div>
-
-    <div class="intro-card">
-      <span class="intro-label" data-en="Collaboration" data-zh="合作">Collaboration</span>
-      <p data-content-key="collaboration">
-        I have collaborated with
-        <a href="https://www.engr.colostate.edu/ece/people/carmen-menoni/" target="_blank" rel="noopener noreferrer">
-          Dr. Carmen Menoni's group at Colorado State University
-        </a>
-        and
-        <a href="http://www.xuvlasers.com/welcome.html" target="_blank" rel="noopener noreferrer">
-          XUV Lasers Inc.
-        </a>
-        to validate laser damage thresholds of optical components. I also look forward
-        to working with other groups on modeling laser-induced damage thresholds and
-        optimizing optical coating designs.
-      </p>
-    </div>
-  </div>
-</section>
 
 <!------------------------------------------ news ------------------------------------------>   
     
@@ -159,21 +157,7 @@
     </li>
     
   </ul>
-</section>
-    
-<!------------------------------------------ academic service ------------------------------------------>
-<section id="service" class="service-section">
-  <h2 data-en="Academic Service" data-zh="学术服务">Academic Service</h2>
-  <div class="section-heading-row">
-    <div><span class="section-kicker" data-en="Peer Review" data-zh="同行评审">Peer Review</span></div>
-    <div class="service-count"><strong>10</strong><span data-en="reviews completed" data-zh="次审稿">reviews completed</span></div>
-  </div>
-  <ul class="service-list">
-    <li><span class="service-journal">Applied Optics</span><span class="service-years">2024 · 2025</span></li>
-    <li><span class="service-journal">Optics Express</span><span class="service-years">2026</span></li>
-    <li><span class="service-journal">Optics Letters</span><span class="service-years">2026</span></li>
-    <li><span class="service-journal">Optical Materials Express</span><span class="service-years">2026</span></li>
-  </ul>
+  <button class="news-more" type="button" data-en="Show more" data-zh="显示更多">Show more</button>
 </section>
 
 <!------------------------------------------ publications ------------------------------------------>
@@ -341,8 +325,9 @@
     </li>
   </ul>
 </section>
+    </div>
   </main>
   <footer class="site-footer">© 2026 Ziyao Su</footer>
-  <script src="site.js?v=20260917-2"></script>
+  <script src="site.js?v=20261030-15"></script>
 </body>
 </html>
