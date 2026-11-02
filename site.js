@@ -338,6 +338,14 @@
     initializeNews();
     initializeAuthorNames();
     initializePublicationTools();
+    document.querySelectorAll('.pub-links [data-en="Abstract"]').forEach(abstractControl => {
+      if (abstractControl.previousElementSibling?.classList.contains("pub-link-divider")) return;
+      const divider = document.createElement("span");
+      divider.className = "pub-link-divider";
+      divider.setAttribute("aria-hidden", "true");
+      divider.textContent = "|";
+      abstractControl.before(divider);
+    });
     document.querySelectorAll(".horizontal-photo-strip figcaption").forEach((el, index) => el.dataset.contentKey = `photo-${index + 1}`);
     document.querySelectorAll(".championship-text").forEach((el, index) => el.dataset.contentKey = `win-${index + 1}`);
     document.querySelectorAll(".pub-authors strong, .pub-author-line strong").forEach(author => {
