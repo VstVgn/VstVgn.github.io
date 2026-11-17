@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Publications | Ziyao Su</title>
+  <title>Research | Ziyao Su</title>
 
-  <meta name="description" content="Full publication list of Ziyao Su, including journal articles and conference proceedings on ultrafast laser-matter interaction, FDTD, PIC simulations." />
+  <meta name="description" content="Research contributions of Ziyao Su, including journal articles, conference proceedings, presentations, and ongoing work on ultrafast laser-matter interaction." />
   <meta name="author" content="Ziyao Su" />
   <script>document.documentElement.lang=new URLSearchParams(location.search).get('lang')==='zh'?'zh-CN':'en'</script>
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="publications.css" />
-  <link rel="stylesheet" href="refine.css?v=20261102-1" />
+  <link rel="stylesheet" href="refine.css?v=20261117-12" />
 </head>
   
 <body>
@@ -20,7 +20,7 @@
     <div class="nav-container">
       <div class="nav-actions"><div class="nav-links">
         <a href="index.html" data-en="Home" data-zh="首页">Home</a>
-        <a href="publications.html" class="active" data-en="Publications" data-zh="学术成果">Publications</a>
+        <a href="publications.html" class="active" data-en="Research" data-zh="科研成果">Research</a>
         <a href="life.html" data-en="Life" data-zh="生活">Life</a>
       </div><button class="language-toggle" type="button" aria-label="切换至中文"><span data-lang="en">EN</span><i></i><span data-lang="zh">中</span></button></div>
     </div>
@@ -28,7 +28,15 @@
 
   <main class="page-container">
     <header class="plain-page-header">
-      <h1 data-en="Publications" data-zh="学术成果">Publications</h1>
+      <h1 data-en="Research" data-zh="科研成果">Research</h1>
+      <div class="research-header-tools">
+        <p class="presenter-note" data-en="†: Presenter" data-zh="†：报告人">†: Presenter</p>
+        <div class="publication-filters" role="group" aria-label="Filter research by type">
+          <button type="button" data-publication-filter="Journal" data-en="Journal" data-zh="期刊" aria-pressed="false">Journal</button>
+          <button type="button" data-publication-filter="Proceeding" data-en="Proceeding" data-zh="会议论文" aria-pressed="false">Proceeding</button>
+          <button type="button" data-publication-filter="Presentation" data-en="Presentation" data-zh="学术报告" aria-pressed="false">Presentation</button>
+        </div>
+      </div>
     </header>
     
 <!------------------------------------------ Upcoming ------------------------------------------>
@@ -41,13 +49,13 @@
         <li class="pub-item">
           <div class="pub-venue">Journal · Optica</div>
           <div class="pub-title">
-            Machine Learning Damage-Aware Optimization of the Dielectric 
-	    Compression Grating for Ultrafast High-Power Lasers
+            Machine Learning-Based Damage-Aware Geometric Optimization of
+            Compression Gratings for High-Power Ultrafast Lasers
           </div>
           <div class="pub-authors">
             <strong>Ziyao Su</strong>, Mohamed Yaseen Noor, Johnny Eschbach,
-	    Ravleen Kaur, Andy Lee, Conrad Kuz, Carmen S. Menoni, Turan Erdogan, 
-	    Doug Smith, and Enam A. Chowdhury
+            Ravleen Kaur, Andy Lee, Conrad Kuz, Carmen S. Menoni,
+            and Enam A. Chowdhury
           </div>
           <div class="pub-meta">Manuscript in preparation for submission</div>
         </li>
@@ -121,23 +129,24 @@
           </div>
           <div class="pub-meta">Under review</div>
           <div class="pub-links">
+            <span class="pub-link-divider" aria-hidden="true">|</span>
             <a class="pub-action" href="https://doi.org/10.48550/arXiv.2603.06809" target="_blank" rel="noopener noreferrer" data-en="Preprint" data-zh="预印本">Preprint</a>
           </div> 
         </li>
 
-        <li class="pub-item" data-keep-links>
-          <div class="pub-venue">Proceeding · SPIE Laser-Induced Damage in Optical Materials 2026</div>
+        <li class="pub-item" data-year="2026" data-bib-key="spie-2026-keldysh" data-bib-disabled>
+          <div class="pub-venue">Presentation · SPIE Laser-Induced Damage in Optical Materials 2026</div>
           <div class="pub-title">
             Keldysh-Ionization-Based FDTD Modeling and Bayesian Optimization of Laser-Induced Damage Thresholds in Hybrid Gratings
           </div>
           <div class="pub-authors">
-            <strong>Ziyao Su</strong>, Johnny Eschbach, and Enam A. Chowdhury
+            <strong>Ziyao Su</strong><sup class="presenter-mark">†</sup>, Johnny Eschbach, and Enam A. Chowdhury
           </div>
           <div class="pub-meta" data-en="Publishing" data-zh="出版中">Publishing</div>
           <div class="pub-links">
-            <span class="pub-badge badge-conference" data-en="Conference" data-zh="会议">Conference</span>
+            <span class="pub-badge badge-presentation" data-en="Presentation" data-zh="学术报告">Presentation</span>
             <button class="abstract-toggle" type="button" data-en="Abstract" data-zh="摘要">Abstract</button>
-            <span class="pub-action is-unavailable" aria-disabled="true" data-en="Slides" data-zh="幻灯片" data-pending-file="assets/documents/slides/spie-2026-keldysh-fdtd-bayesian-optimization.pdf">Slides</span>
+            <span class="pub-action is-unavailable" aria-disabled="true" data-en="Slides" data-zh="幻灯片" data-pending-file="assets/documents/slides/spie-2026-keldysh-fdtd-bayesian-optimization-slides.pdf">Slides</span>
           </div>
           <div class="pub-abstract" hidden>
             <p>
@@ -146,17 +155,17 @@
           </div>
         </li>
 
-        <li class="pub-item" data-keep-links>
-          <div class="pub-venue">Proceeding · SPIE Laser-Induced Damage in Optical Materials 2026</div>
+        <li class="pub-item" data-year="2026" data-bib-key="spie-2026-machine-learning" data-bib-disabled>
+          <div class="pub-venue">Presentation · SPIE Laser-Induced Damage in Optical Materials 2026</div>
           <div class="pub-title">
             Machine Learning Optimization of Diffraction Efficiency and LIDT for MLD Gratings for High Intensity Lasers
           </div>
           <div class="pub-authors">
-            Johnny Eschbach, <strong>Ziyao Su</strong>, and Enam A. Chowdhury
+            Johnny Eschbach, <strong>Ziyao Su</strong>, and Enam A. Chowdhury<sup class="presenter-mark">†</sup>
           </div>
           <div class="pub-meta" data-en="Publishing" data-zh="出版中">Publishing</div>
           <div class="pub-links">
-            <span class="pub-badge badge-conference" data-en="Conference" data-zh="会议">Conference</span>
+            <span class="pub-badge badge-presentation" data-en="Presentation" data-zh="学术报告">Presentation</span>
             <button class="abstract-toggle" type="button" data-en="Abstract" data-zh="摘要">Abstract</button>
             <span class="pub-action is-unavailable" aria-disabled="true" data-en="Slides" data-zh="幻灯片">Slides</span>
           </div>
@@ -177,6 +186,18 @@
       <h2 class="sticky-year">2026</h2>
       
       <ol class="pub-list">
+
+        <li class="pub-item" data-award-en="Best Student Poster Award" data-award-zh="最佳学生海报奖">
+          <div class="pub-venue">Presentation · ICUIL 2026</div>
+          <div class="pub-title">
+            <a href="https://icuil2026.org/programme/poster-sessions/" target="_blank" rel="noopener noreferrer">
+              Machine Learning Optimization of Diffraction Efficiency and LIDT for MLD Gratings for High Intensity Lasers
+            </a>
+          </div>
+          <div class="pub-authors">
+            Johnny Eschbach<sup class="presenter-mark">†</sup>, <strong>Ziyao Su</strong>, and Enam A. Chowdhury
+          </div>
+        </li>
 
         <li class="pub-item">
           <div class="pub-venue">Journal · Optics Letters</div>
@@ -252,17 +273,50 @@
             Damage Mechanisms
           </div>
           <div class="pub-authors">
-            <strong>Ziyao Su</strong> and Enam A. Chowdhury
+            <strong>Ziyao Su</strong><sup class="presenter-mark">†</sup> and Enam A. Chowdhury
           </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1364/CLEO_AT.2026.JW1.123" target="_blank" rel="noopener noreferrer">DOI</a>
             <button class="abstract-toggle" type="button">Abstract</button>
-            <a href="assets/documents/slides/cleo-2026-fdtd-hybrid-grating.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            <a href="assets/documents/slides/cleo-2026-fdtd-hybrid-grating-poster.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           <div class="pub-abstract" hidden>
             <p>
 		We present a 2D FDTD–based framework for sub-ps laser interaction with hybrid metal–dielectric gratings, incorporating Keldysh photoionization 
 		and impact ionization to predict ultrafast electron dynamics, field enhancement, and damage initiation.
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-venue">Presentation · SPIE High-Power Laser Ablation IX</div>
+          <div class="pub-title">
+            <a href="https://spie.org/high-power-laser-ablation/presentation/FDTD-modeling-of-sub-picosecond-laser-interaction-and-damage-in/PC14074-47" target="_blank" rel="noopener noreferrer">
+              FDTD Modeling of Sub-Picosecond Laser Interaction and Damage in Hybrid Optical Coatings
+            </a>
+          </div>
+          <div class="pub-authors">
+            <strong>Ziyao Su</strong> and Enam A. Chowdhury<sup class="presenter-mark">†</sup>
+          </div>
+          <div class="pub-links">
+            <a href="assets/documents/slides/spie-hpla-2026-fdtd-hybrid-optical-coatings-poster.pdf" target="_blank" rel="noopener noreferrer" data-en="Slides" data-zh="幻灯片">Slides</a>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>
+              We developed a 2D FDTD simulation framework that models how high-intensity,
+              7 to 1,000 fs laser pulses interact with hybrid multilayer optical coatings.
+              The framework incorporates key microscopic processes relevant to strong-field
+              excitation in dielectrics, including Keldysh photoionization, impact ionization
+              treated through a multiple-rate-equation (MRE) model, Spitzer electron
+              collisions, and a transient Drude model that provides free-carrier optical
+              response in dielectric and metallic layers. Total-field/scattered-field (TFSF)
+              method is implemented to inject long-duration, obliquely incident pulses. The
+              framework captures both the electromagnetic fields and the rapid material
+              response that leads to damage. Applied to a hybrid
+              SiO<sub>2</sub>/HfO<sub>2</sub>/Au multilayer grating at 1057 nm with 500 fs
+              duration, the simulation predicts a LIDT fluence in close agreement with
+              experimental measurements. This approach provides a practical tool for
+              designing more robust optical components for PW-power laser systems.
             </p>
           </div>
         </li>
@@ -316,25 +370,25 @@
 
 <!------------------------------------------ 2025 ------------------------------------------>
     
-    <section class="pub-section year-section">
+    <section class="pub-section year-section" data-year-section="2025">
       <h2 class="sticky-year">2025</h2>
 
       <ol class="pub-list">
 
-        <li class="pub-item">
-          <div class="pub-venue">Proceeding · SPIE Laser-Induced Damage in Optical Materials 2025</div>
+        <li class="pub-item" data-sort="2" data-award-en="MJ Soileau Best Student Paper Award" data-award-zh="MJ Soileau 最佳学生论文奖">
+          <div class="pub-venue">Presentation · SPIE Laser-Induced Damage in Optical Materials 2025</div>
           <div class="pub-title">
             Keldysh Ionization Based-FDTD Modeling of Laser-Induced Damage Threshold
             of MLD-IBS Compression Gratings for Petawatt 2 μm Laser Systems
           </div>
           <div class="pub-authors">
-            <strong>Ziyao Su</strong>, Mohamed Yaseen Noor, Emma DeAngelis,
+            <strong>Ziyao Su</strong><sup class="presenter-mark">†</sup>, Mohamed Yaseen Noor, Emma DeAngelis,
             Carmen S. Menoni, and Enam A. Chowdhury
           </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1117/12.3071987" target="_blank">DOI</a>
             <button class="abstract-toggle" type="button">Abstract</button>
-            <a href="assets/documents/slides/spie-2025-keldysh-fdtd-mld-ibs-gratings.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            <a href="assets/documents/slides/spie-2025-keldysh-fdtd-mld-ibs-gratings-slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           
           <div class="pub-abstract" hidden>
@@ -358,7 +412,20 @@
           </div>
         </li>
         
-        <li class="pub-item">
+        <li class="pub-item" data-sort="1" data-bib-venue="Laboratory for Laser Energetics, University of Rochester" data-award-en="Invited Talk" data-award-zh="特邀报告">
+          <div class="pub-venue">Presentation · Laboratory for Laser Energetics, University of Rochester</div>
+          <div class="pub-title">
+            2D FDTD Modeling of Ultrashort Laser–Matter Interactions
+          </div>
+          <div class="pub-authors">
+            <strong>Ziyao Su</strong><sup class="presenter-mark">†</sup> and Enam A. Chowdhury
+          </div>
+          <div class="pub-links">
+            <a href="assets/documents/slides/lle-2025-2d-fdtd-ultrashort-laser-matter-interactions-slides.pdf" target="_blank" rel="noopener noreferrer" data-en="Slides" data-zh="幻灯片">Slides</a>
+          </div>
+        </li>
+
+        <li class="pub-item" data-sort="3">
           <div class="pub-venue">Journal · High Power Laser Science and Engineering</div>
           <div class="pub-title">
             A Fully Three-Dimensional Kinetic Particle-In-Cell Framework for Modeling
@@ -399,23 +466,23 @@
 
 <!------------------------------------------ 2024 ------------------------------------------>
     
-    <section class="pub-section year-section">
+    <section class="pub-section year-section" data-year-section="2024">
       <h2 class="sticky-year">2024</h2>
 
       <ol class="pub-list">
-        <li class="pub-item">
-          <div class="pub-venue">Proceeding · SPIE Laser-Induced Damage in Optical Materials 2024</div>
+        <li class="pub-item" data-sort="1">
+          <div class="pub-venue">Presentation · SPIE Laser-Induced Damage in Optical Materials 2024</div>
           <div class="pub-title">
             Electron Dynamics of Femtosecond Laser Induced Plasma Inside Multilayer
             Dielectric High Reflectors Studied Using Particle-in-Cell (PIC) Approach
           </div>
           <div class="pub-authors">
-            <strong>Ziyao Su</strong>, Joseph R. Smith, and Enam A. Chowdhury
+            <strong>Ziyao Su</strong><sup class="presenter-mark">†</sup>, Joseph R. Smith, and Enam A. Chowdhury
           </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1117/12.3033000" target="_blank">DOI</a>
             <button class="abstract-toggle" type="button">Abstract</button>
-            <a href="assets/documents/slides/spie-2024-electron-dynamics-pic.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            <a href="assets/documents/slides/spie-2024-electron-dynamics-pic-slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           
           <div class="pub-abstract" hidden>
@@ -437,13 +504,78 @@
           </div>
         </li>
 
-        <li class="pub-item">
-          <div class="pub-venue">Proceeding · SPIE Laser-Induced Damage in Optical Materials 2024</div>
+        <li class="pub-item" data-sort="3" data-presentation-type="Poster">
+          <div class="pub-venue">Presentation · LaserNetUS User Meeting 2024</div>
+          <div class="pub-title">
+            Electron Dynamics of Femtosecond Laser Induced Plasma Inside Multilayer
+            Dielectric High Reflectors Studied Using Particle-in-Cell (PIC) Approach
+          </div>
+          <div class="pub-authors">
+            <strong>Ziyao Su</strong><sup class="presenter-mark">†</sup>, Joseph R. Smith, and Enam A. Chowdhury
+          </div>
+          <div class="pub-links">
+            <a href="assets/documents/slides/lasernetus-2024-electron-dynamics-pic-poster.pdf" target="_blank" rel="noopener noreferrer" data-en="Slides" data-zh="幻灯片">Slides</a>
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>
+              Computational laser-solid interaction plays an increasingly significant role
+              in predicting laser induced damage and threshold (LIDT). To capture the
+              non-thermal effects resulting from electronic excitation or their ballistic
+              motion, Particle-in-Cell (PIC) simulations that statistically represents
+              particles by solving Maxwell’s equations within computational grids and
+              calculate Lorentz force and additional physics, including ionization and
+              collisions is used. Here we used the modified open-source PIC code, EPOCH and
+              added Keldysh photoionization model to conduct simulations.
+            </p>
+            <p>
+              We simulated the interaction of an 800 nm, 7 fs long laser with a multilayered
+              mirror made of 11 oscillating fused silica (SiO<sub>2</sub>) and hafnia
+              (HfO<sub>2</sub>) layers. Our findings indicate that the primary concentration
+              of charged particles occurs in the first HfO<sub>2</sub> layer, while plasma
+              formation may happen in the top SiO<sub>2</sub> layer. The LIDT falls between
+              0.2 to 0.3 J/cm<sup>2</sup>. Additionally, conduction band electrons reach
+              thermal equilibrium within about 15 fs. Understanding these interactions is
+              vital for enhancing optical component durability and optimizing high-intensity
+              laser system performance. Our modeling provides insights for designing and
+              manufacturing optical components.
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item" data-sort="5">
+          <div class="pub-venue">Presentation · 2024 Spring Meeting of the APS Eastern Great Lakes Section</div>
+          <div class="pub-title">
+            <a href="https://meetings-archive.aps.org/eglss/2024/q04/1/" target="_blank" rel="noopener noreferrer">
+              Kinetic Simulations of Intense Laser-Dielectric Interactions
+            </a>
+          </div>
+          <div class="pub-authors">
+            Joseph R. Smith<sup class="presenter-mark">†</sup>, <strong>Ziyao Su</strong>, Simin Zhang, and Enam A. Chowdhury
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>
+              We present a novel three-dimensional framework for simulating intense
+              short-pulse lasers interacting with dielectric materials. Our work modifies
+              the open-source Particle-In-Cell (PIC) code EPOCH to include new models for
+              molecular photoionization, dielectric optical response, and impact ionization.
+              We use this framework to model the laser-induced damage of dielectric materials
+              by few-cycle laser pulses. A sequence of simulations with varying laser fluence
+              allow us to better understand the laser damage process by providing new insight
+              into energy absorption, excited particle dynamics, and nonthermal excited
+              particle distributions. Additional applications of this framework include laser
+              damage of multilayer interference coatings to improve next-generation optics and
+              modeling of the extreme conditions created from laser-microstructure interactions.
+            </p>
+          </div>
+        </li>
+
+        <li class="pub-item" data-sort="2">
+          <div class="pub-venue">Presentation · SPIE Laser-Induced Damage in Optical Materials 2024</div>
           <div class="pub-title">
             Study of Plasma Dynamics of Femtosecond Laser Damage in Metal Thiophosphates
           </div>
           <div class="pub-authors">
-            Adam Fisher, Ryan Siebenaller, Emma DeAngelis, Mohamed Yaseen Noor, Conrad Kuz,
+            Adam Fisher<sup class="presenter-mark">†</sup>, Ryan Siebenaller, Emma DeAngelis, Mohamed Yaseen Noor, Conrad Kuz,
             Justin Twardowski, Milo Eder, <strong>Ziyao Su</strong>, and Enam A. Chowdhury
           </div>
           <div class="pub-links">
@@ -465,21 +597,21 @@
           </div>
         </li>
 
-        <li class="pub-item">
+        <li class="pub-item" data-sort="4">
           <div class="pub-venue">Proceeding · CLEO 2024</div>
           <div class="pub-title">
             Electron Dynamics of Femtosecond Laser Induced Plasma Inside Multilayer
             Dielectric High Reflectors Studied Using Particle-in-Cell (PIC) Approach
           </div>
           <div class="pub-authors">
-            <strong>Ziyao Su</strong>, Joseph R. Smith, and Enam A. Chowdhury
+            <strong>Ziyao Su</strong><sup class="presenter-mark">†</sup>, Joseph R. Smith, and Enam A. Chowdhury
           </div>
           <div class="pub-links">
             <a href="https://doi.org/10.1364/CLEO_SI.2024.SF3H.5" target="_blank">
               DOI
             </a>
             <button class="abstract-toggle" type="button">Abstract</button>
-            <a href="assets/documents/slides/cleo-2024-electron-dynamics-pic.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            <a href="assets/documents/slides/cleo-2024-electron-dynamics-pic-slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
           </div>
           
           <div class="pub-abstract" hidden>
@@ -551,7 +683,7 @@
             Multilayer Dielectric Gratings
           </div>
           <div class="pub-authors">
-            Simin Zhang, <strong>Ziyao Su</strong>, Carmen S. Menoni,
+            Simin Zhang<sup class="presenter-mark">†</sup>, <strong>Ziyao Su</strong>, Carmen S. Menoni,
             and Enam A. Chowdhury
           </div>
           <div class="pub-links">
@@ -577,11 +709,11 @@
 
   
   <footer class="site-footer">
-    <span data-en="Last updated · Nov 2, 2026" data-zh="最近更新 · 2026 年 11 月 2 日">Last updated · Nov 2, 2026</span>
+    <span data-en="Last updated · Nov 16, 2026" data-zh="最近更新 · 2026 年 11 月 16 日">Last updated · Nov 16, 2026</span>
     <span class="footer-signature">@Ziyao Su</span>
   </footer>
 
     
-  <script src="site.js?v=20261102-1"></script>
+  <script src="site.js?v=20261117-16"></script>
 </body>
 </html>
