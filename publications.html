@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="publications.css" />
-  <link rel="stylesheet" href="refine.css?v=20261117-12" />
+  <link rel="stylesheet" href="refine.css?v=20261118-13" />
 </head>
   
 <body>
@@ -167,7 +167,7 @@
           <div class="pub-links">
             <span class="pub-badge badge-presentation" data-en="Presentation" data-zh="学术报告">Presentation</span>
             <button class="abstract-toggle" type="button" data-en="Abstract" data-zh="摘要">Abstract</button>
-            <span class="pub-action is-unavailable" aria-disabled="true" data-en="Slides" data-zh="幻灯片">Slides</span>
+            <span class="pub-action is-unavailable" aria-disabled="true" data-en="Slides" data-zh="幻灯片" data-pending-file="assets/documents/slides/spie-2026-machine-learning-mld-gratings-slides.pdf">Slides</span>
           </div>
           <div class="pub-abstract" hidden>
             <p>
@@ -196,6 +196,17 @@
           </div>
           <div class="pub-authors">
             Johnny Eschbach<sup class="presenter-mark">†</sup>, <strong>Ziyao Su</strong>, and Enam A. Chowdhury
+          </div>
+          <div class="pub-abstract" hidden>
+            <p>
+              High-power ultrafast laser systems require diffraction gratings to stretch and compress femto- to picosecond laser pulses, preventing optical component damage due to extreme incident intensity. Projects such as Lawrence Livermore National Laboratory’s Big Aperture Thulium (BAT) petawatt-class laser or the U.S. Department of Energy’s Accelerator R&amp;D and Production (ARDAP) program necessitate gratings with high diffraction efficiencies and robust laser-induced damage thresholds (LIDT). This work optimizes the geometry and operating conditions of a SiO<sub>2</sub>/HfO<sub>2</sub> multilayer dielectric (MLD) grating designed for a 1.95-micrometer central wavelength, 70-femtosecond, s-polarized pulse. Experimental and simulation data demonstrate that state-of-the-art designs in other work for this laser setup achieve a minimum of 92% and a maximum of over 99% first-order diffraction efficiency for wavelengths between 1.85 and 2.05 micrometers.
+            </p>
+            <p>
+              By validating the efficacy of a grating design using a library of simulation frameworks, we forgo the need for costly physical trials. We employ an open-source rigorous coupled-wave analysis (RCWA) program to evaluate first-order diffraction efficiency. In addition, our 2D finite-difference time-domain (FDTD) architecture incorporates Keldysh photoionization, impact ionization, Drude-based free-carrier optical response, and Spitzer collisions to predict spatial electron density. This metric’s correlation with avalanche ionization and lattice deformation allows us to use the peak electron density as a proxy for LIDT.
+            </p>
+            <p>
+              To optimize this design, we implement a Bayesian optimization routine using Upper Confidence Bound and the Kriging Believer algorithm for parallelized evaluation. This framework concurrently tunes the grating duty cycle, pillar height, and laser angle of incidence to maximize peak and average first-order diffraction efficiency across the wavelength range 1.85–2.05 micrometers and minimize peak electron density. Optimal design parameters show a 20% reduction in peak electron density from current designs and an improvement in peak diffraction efficiency.
+            </p>
           </div>
         </li>
 
@@ -714,6 +725,6 @@
   </footer>
 
     
-  <script src="site.js?v=20261117-16"></script>
+  <script src="site.js?v=20261118-18"></script>
 </body>
 </html>

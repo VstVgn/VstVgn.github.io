@@ -52,7 +52,6 @@ a { font-weight:700; }
 .news-list { position:relative; }
 .news-list::before { content:""; position:absolute; left:91px; top:9px; bottom:9px; width:1px; background:linear-gradient(var(--primary),transparent); opacity:.35; }
 .news-list li { position:relative; grid-template-columns:88px 1fr; gap:22px; padding:11px 0; }
-.news-text a strong { color:inherit; }
 .news-date { color:var(--primary-dark); font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.78rem; }
 .news-more { display:block; margin:15px auto 0; padding:7px 16px; border:1px solid rgba(34,68,99,.18); border-radius:999px; color:var(--primary-dark); background:rgba(255,255,255,.58); font:inherit; font-size:.78rem; font-weight:750; cursor:pointer; transition:background .2s ease,border-color .2s ease,transform .2s ease; }
 .news-more:hover { transform:translateY(-1px); border-color:rgba(34,68,99,.34); background:rgba(255,255,255,.9); }
