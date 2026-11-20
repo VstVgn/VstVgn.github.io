@@ -11,7 +11,7 @@
   <script>document.documentElement.lang=new URLSearchParams(location.search).get('lang')==='zh'?'zh-CN':'en'</script>
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="publications.css" />
+  <link rel="stylesheet" href="publications.css?v=20261120-1" />
   <link rel="stylesheet" href="refine.css?v=20261118-13" />
 </head>
   
@@ -32,7 +32,7 @@
       <div class="research-header-tools">
         <p class="presenter-note" data-en="†: Presenter" data-zh="†：报告人">†: Presenter</p>
         <div class="publication-filters" role="group" aria-label="Filter research by type">
-          <button type="button" data-publication-filter="Journal" data-en="Journal" data-zh="期刊" aria-pressed="false">Journal</button>
+          <button type="button" data-publication-filter="Journal" data-en="Journal" data-zh="期刊论文" aria-pressed="false">Journal</button>
           <button type="button" data-publication-filter="Proceeding" data-en="Proceeding" data-zh="会议论文" aria-pressed="false">Proceeding</button>
           <button type="button" data-publication-filter="Presentation" data-en="Presentation" data-zh="学术报告" aria-pressed="false">Presentation</button>
         </div>
@@ -197,12 +197,15 @@
           <div class="pub-authors">
             Johnny Eschbach<sup class="presenter-mark">†</sup>, <strong>Ziyao Su</strong>, and Enam A. Chowdhury
           </div>
+          <div class="pub-links">
+            <a href="assets/documents/slides/icuil-2026-machine-learning-mld-gratings-poster.pdf" target="_blank" rel="noopener noreferrer" data-en="Slides" data-zh="幻灯片">Slides</a>
+          </div>
           <div class="pub-abstract" hidden>
             <p>
-              High-power ultrafast laser systems require diffraction gratings to stretch and compress femto- to picosecond laser pulses, preventing optical component damage due to extreme incident intensity. Projects such as Lawrence Livermore National Laboratory’s Big Aperture Thulium (BAT) petawatt-class laser or the U.S. Department of Energy’s Accelerator R&amp;D and Production (ARDAP) program necessitate gratings with high diffraction efficiencies and robust laser-induced damage thresholds (LIDT). This work optimizes the geometry and operating conditions of a SiO<sub>2</sub>/HfO<sub>2</sub> multilayer dielectric (MLD) grating designed for a 1.95-micrometer central wavelength, 70-femtosecond, s-polarized pulse. Experimental and simulation data demonstrate that state-of-the-art designs in other work for this laser setup achieve a minimum of 92% and a maximum of over 99% first-order diffraction efficiency for wavelengths between 1.85 and 2.05 micrometers.
+              High-power ultrafast laser systems require diffraction gratings to stretch and compress femto- to picosecond laser pulses, preventing optical component damage due to extreme incident intensity. Projects such as Lawrence Livermore National Laboratory's Big Aperture Thulium (BAT) petawatt-class laser or the U.S. Department of Energy's Accelerator R&amp;D and Production (ARDAP) program necessitate gratings with high diffraction efficiencies and robust laser-induced damage thresholds (LIDT). This work optimizes the geometry and operating conditions of a SiO<sub>2</sub>/HfO<sub>2</sub> multilayer dielectric (MLD) grating designed for a 1.95-micrometer central wavelength, 70-femtosecond, s-polarized pulse. Experimental and simulation data demonstrate that state-of-the-art designs in other work for this laser setup achieve a minimum of 92% and a maximum of over 99% first-order diffraction efficiency for wavelengths between 1.85 and 2.05 micrometers.
             </p>
             <p>
-              By validating the efficacy of a grating design using a library of simulation frameworks, we forgo the need for costly physical trials. We employ an open-source rigorous coupled-wave analysis (RCWA) program to evaluate first-order diffraction efficiency. In addition, our 2D finite-difference time-domain (FDTD) architecture incorporates Keldysh photoionization, impact ionization, Drude-based free-carrier optical response, and Spitzer collisions to predict spatial electron density. This metric’s correlation with avalanche ionization and lattice deformation allows us to use the peak electron density as a proxy for LIDT.
+              By validating the efficacy of a grating design using a library of simulation frameworks, we forgo the need for costly physical trials. We employ an open-source rigorous coupled-wave analysis (RCWA) program to evaluate first-order diffraction efficiency. In addition, our 2D finite-difference time-domain (FDTD) architecture incorporates Keldysh photoionization, impact ionization, Drude-based free-carrier optical response, and Spitzer collisions to predict spatial electron density. This metric's correlation with avalanche ionization and lattice deformation allows us to use the peak electron density as a proxy for LIDT.
             </p>
             <p>
               To optimize this design, we implement a Bayesian optimization routine using Upper Confidence Bound and the Kriging Believer algorithm for parallelized evaluation. This framework concurrently tunes the grating duty cycle, pillar height, and laser angle of incidence to maximize peak and average first-order diffraction efficiency across the wavelength range 1.85–2.05 micrometers and minimize peak electron density. Optimal design parameters show a 20% reduction in peak electron density from current designs and an improvement in peak diffraction efficiency.
@@ -725,6 +728,6 @@
   </footer>
 
     
-  <script src="site.js?v=20261118-18"></script>
+  <script src="site.js?v=20261120-19"></script>
 </body>
 </html>

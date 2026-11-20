@@ -4,7 +4,7 @@
     News: "近况", "Selected Publications": "代表性成果",
     "Journal Articles": "期刊论文", "Conference Proceedings": "会议论文", Presentations: "学术报告",
     "Journal Reviewer": "期刊审稿",
-    "In Progress": "进展中", Journal: "期刊", "Under review": "审稿中",
+    "In Progress": "进展中", Journal: "期刊论文", "Under review": "审稿中",
     "Manuscript in preparation for submission": "投稿中",
     Publishing: "出版中", Proceeding: "会议论文", Presentation: "学术报告",
     Abstract: "摘要", "Hide abstract": "收起摘要",

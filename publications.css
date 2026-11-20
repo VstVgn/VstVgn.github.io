@@ -167,6 +167,10 @@
 
 .pub-abstract p {
   margin: 0;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: left;
+  overflow-wrap: anywhere;
 }
 
 /* Publications mobile */
